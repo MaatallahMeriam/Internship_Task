@@ -37,9 +37,9 @@ function CreateAccount() {
           <label className="block text-sm font-medium text-gray-700">Year of experience</label>
           <select className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm">
             <option>Please Select</option>
-            <option>1 year</option>
-            <option>2 years</option>
-            <option>3 years</option>
+            <option>1 Year</option>
+            <option>2 Years</option>
+            <option>3 Years</option>
           </select>
         </div>
         <div className="flex items-center">
