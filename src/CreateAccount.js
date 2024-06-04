@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaExclamationTriangle } from 'react-icons/fa';
 import { object, string } from 'zod'; // Importez object et string depuis Zod
 
 function CreateAccount() {
@@ -25,7 +26,7 @@ function CreateAccount() {
     try {
       createAccountSchema.parse(formData);
     } catch (error) {
-      setError(error.errors.join(', ')); // Mettez à jour l'erreur avec les messages d'erreur combinés
+      setError(error.errors.join(', ')); 
     }
   };
 
@@ -41,8 +42,7 @@ function CreateAccount() {
   return (
     <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-4 text-center text-blue-500">Create Account</h2>
-
-      <p>  Create your account in a second to receive our latest news!</p>
+      <p>Create your account in a second to receive our latest news!</p>
       <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
           <label className="block text-sm font-medium text-gray-700">Email</label>
@@ -65,7 +65,12 @@ function CreateAccount() {
           className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
           placeholder="Password"
         />
-        {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
+        {error && (
+          <div className="flex items-center text-red-500 text-xs mt-1">
+            <FaExclamationTriangle className="mr-1" />
+            <span><strong>Error message.</strong> <a href="#" className="text-red-600 underline text-[#E59191]">Learn more</a></span>
+          </div>
+        )}
         <div>
           <label className="block text-sm font-medium text-gray-700">Year of experience</label>
           <select

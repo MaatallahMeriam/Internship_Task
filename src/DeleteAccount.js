@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { FaExclamationTriangle } from 'react-icons/fa';
 function DeleteAccount() {
   const [selectedReason, setSelectedReason] = useState('');
   const [comments, setComments] = useState('');
@@ -16,11 +16,11 @@ function DeleteAccount() {
       <form className="space-y-4">
       {!selectedReason && (
   <div className="flex items-center">
-    <svg className="h-4 w-4 text-red-500 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-      <path fillRule="evenodd" d="M10 18a1 1 0 01-.707-.293l-8-8a1 1 0 010-1.414l8-8a1 1 0 011.414 1.414L3.414 10 10 16.586 16.586 10 10 3.414 11.414 2l8 8a1 1 0 010 1.414l-8 8A1 1 0 0110 18zm0-16a1 1 0 011 1v10a1 1 0 01-2 0V3a1 1 0 011-1z" clipRule="evenodd" />
-    </svg>
-    <p className="text-red-500 text-xs mt-1"><strong>Please select one of the below reasons.</strong></p>
+  <div className="flex items-center text-red-500 text-xs mt-1">
+    <FaExclamationTriangle className="mr-1" />
+    <p><strong>Please select one of the below reasons.</strong></p>
   </div>
+</div>
 )}
 
         <div>
