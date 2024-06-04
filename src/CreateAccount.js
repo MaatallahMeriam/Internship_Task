@@ -42,7 +42,7 @@ function CreateAccount() {
     <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-4 text-center text-blue-500">Create Account</h2>
 
-      <p>Create your account in a second to receive our latest news!</p>
+      <p>  Create your account in a second to receive our latest news!</p>
       <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
           <label className="block text-sm font-medium text-gray-700">Email</label>
@@ -82,7 +82,7 @@ function CreateAccount() {
         </div>
         <div className="flex items-center">
           <input type="checkbox" className="h-4 w-4 text-blue-600 border-gray-300 rounded" checked />
-          <label className="ml-2 block text-sm text-gray-900">Remember Me.</label>
+          <label className="ml-2 block text-sm text-gray-900">Remember Me</label>
         </div>
         <button
           type="submit"
