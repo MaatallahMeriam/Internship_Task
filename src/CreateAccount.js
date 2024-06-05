@@ -52,6 +52,7 @@ function CreateAccount() {
             value={formData.email}
             onChange={handleInputChange}
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
+            placeholder="Email"
           />
         </div>
         <div className="flex justify-between">
